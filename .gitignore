@@ -1,0 +1,20 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build
+dist/
+
+# Env files (jamais commit les clés)
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# Mac / Windows
+.DS_Store
+Thumbs.db
