@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="../src/styles.css">
   </head>
   <body>
-    <!-- background dynamique -->
+    
     <div id="background"></div>
 
-    <!-- contenu principal -->
+    
     <div id="main-container">
       <header id="header">
         <div id="logo">
@@ -20,12 +20,12 @@
         </div>
        <form id="weather-form">
   <div class="search-box">
-    <!-- Bouton recherche (icône à gauche) -->
+   
     <button type="submit" class="search-btn">
       <img src="../src/assets/search.png" alt="search">
     </button>
 
-    <!-- Input texte -->
+    
     <input
       type="text"
       id="city-input"
@@ -33,7 +33,7 @@
       required
     />
 
-    <!-- Bouton toggle C/F -->
+    
     <button type="button" id="unit-toggle">°C</button>
   </div>
 </form>
@@ -41,7 +41,12 @@
       </header>
 
       <div id="result-container">
-        <!-- Résultats météo affichés ici -->
+        <div id="main-content">
+          <h1 id="today-weather">Today's Weather Forecast</h1>
+          <div id="little-details"></div>
+        </div>
+        <div id="details-hourly"></div>
+        <div id="week-forecast"></div>
       </div>
     </div>
   </body>
