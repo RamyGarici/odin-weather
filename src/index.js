@@ -23,7 +23,7 @@ async function handleSearch(city) {
   } else {
     container.innerHTML = "<p style='color:red'>Erreur : impossible de récupérer la météo</p>";
   }
-}catch{alert("Error when fetching the data")}}
+}catch{alert("An error occurred while fetching the data")}}
 
 initSearch(handleSearch);
 handleSearch("Paris");
