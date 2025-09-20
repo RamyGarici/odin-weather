@@ -14,6 +14,7 @@ document.querySelector(".search-btn img").src = searchIcon;
 
 async function handleSearch(city) {
   // tu choisis une ville pour tester
+  try{
   const data = await fetchWeather(city);
   updateBackground(data);
 
@@ -22,7 +23,7 @@ async function handleSearch(city) {
   } else {
     container.innerHTML = "<p style='color:red'>Erreur : impossible de récupérer la météo</p>";
   }
-}
+}catch{alert("Error when fetching the data")}}
 
 initSearch(handleSearch);
 handleSearch("Paris");
