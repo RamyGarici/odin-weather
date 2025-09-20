@@ -3,20 +3,20 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
 
 module.exports = {
-  entry: "./src/index.js", // point d'entrée
+  entry: "./src/index.js", 
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.[contenthash].js", // hash pour cache-busting
-    clean: true, // nettoie dist avant build
+    filename: "bundle.[contenthash].js", 
+    clean: true, 
   },
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"], // gère le CSS
+        use: ["style-loader", "css-loader"], 
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i, // gère les images
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
       },
     ],
@@ -25,12 +25,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
-    new Dotenv(), // charge ton .env
+    new Dotenv({
+      path: "./.env", 
+      safe: false,   
+      systemvars: true, 
+    }),
   ],
   devServer: {
     static: "./dist",
     open: true,
     port: 3000,
+    hot: true, 
   },
   mode: "development",
 };

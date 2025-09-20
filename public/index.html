@@ -4,47 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CielOuvert</title>
-    <link rel="stylesheet" href="../src/styles.css">
     
   </head>
   <body>
-    
     <div id="background"></div>
 
-    
     <div id="main-container">
       <header id="header">
         <div id="logo">
-          <img id="logo-img" src="../src/assets/logo.png" width="120" height="120">
-        <h1 id="title">CielOuvert</h1>
-
+          <img
+            id="logo-img"
+          
+           
+          />
+          <h1 id="title">CielOuvert</h1>
         </div>
-       <form id="weather-form">
-  <div class="search-box">
-   
-    <button type="submit" class="search-btn">
-      <img src="../src/assets/search.png" alt="search">
-    </button>
+        <form id="weather-form">
+          <div class="search-box">
+            <button type="submit" class="search-btn">
+              <img  alt="search" />
+            </button>
 
-    
-    <input
-      type="text"
-      id="city-input"
-      placeholder="Enter City Name..."
-      required
-    />
+            <input
+              type="text"
+              id="city-input"
+              placeholder="Enter City Name..."
+              required
+            />
 
-    
-    <button type="button" id="unit-toggle">°C</button>
-  </div>
-</form>
-
+            <button type="button" id="unit-toggle">°C</button>
+          </div>
+        </form>
       </header>
 
       <div id="result-container">
         <div id="main-content">
           <h1 id="today-weather">Today's Weather Forecast</h1>
-          <div id="little-details"></div>
+          <div id="weather-card"></div>
         </div>
         <div id="details-hourly"></div>
         <div id="week-forecast"></div>
